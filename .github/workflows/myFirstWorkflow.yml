@@ -1,0 +1,3 @@
+name: My First workflow
+# To get a trigger on every commit.
+on: push
