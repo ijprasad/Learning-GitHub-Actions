@@ -31,7 +31,7 @@ jobs:
     steps:
       - name: Job with Single Dependency
         run: |
-          echo "GitHub started at ${{ github.run_started_at }}"
+          echo "GitHub started at $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
           sleep 10
   MyJob4:
     name: My Job 4
