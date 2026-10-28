@@ -30,7 +30,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Job with Single Dependency
-        run: sleep 10
+        run: |
+          echo "GitHub started at ${{ github.run_started_at }}"
+          sleep 10
   MyJob4:
     name: My Job 4
     needs:
