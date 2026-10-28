@@ -22,5 +22,22 @@ jobs:
       - name: Running multiple commands
         run: |
           echo "Hi, from Inderjeet Prasad"
-          echo "Current time is 'date'"
+          echo "Current time is 'date' "
           sleep 20
+  MyJob3:
+    name: My Job 3
+    needs: MyJob1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Job with Single Dependency
+        run: sleep 10
+  MyJob4:
+    name: My Job 4
+    needs:
+      - MyJob1
+      - MyJob2
+      - MyJob3
+    runs-on: ubuntu-latest
+    steps:
+      - name: Job with Multiple Dependecy
+        run: sleep 10
