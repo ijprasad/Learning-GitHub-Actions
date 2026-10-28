@@ -1,3 +1,14 @@
 name: My First workflow
 # To get a trigger on every commit.
 on: push
+
+jobs:
+  MyJob1:
+    name: My Job 1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Running Single command in Job 1
+      - run: echo "Hi, this is my first GitHub Workflow"
+      - name: Checking OS Release for GitHub working
+      - run: cat /etc/os-release
+      
