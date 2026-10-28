@@ -22,7 +22,7 @@ jobs:
       - name: Running multiple commands
         run: |
           echo "Hi, from Inderjeet Prasad"
-          echo "Current time is 'date' "
+          echo "Current date is $(date +'%Y-%m-%d')"
           sleep 20
   MyJob3:
     name: My Job 3
