@@ -27,10 +27,12 @@ jobs:
   MyJob3:
     name: My Job 3
     needs: MyJob1
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: Job with Single Dependency
-        run: |
+        shell: pwsh
+        run: 
+          echo Get-ComputerInfo
           echo "GitHub started at $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
           sleep 10
   MyJob4:
@@ -39,7 +41,7 @@ jobs:
       - MyJob1
       - MyJob2
       - MyJob3
-    runs-on: ubuntu-latest
+    runs-on: macos-13
     steps:
       - name: Job with Multiple Dependecy
         run: sleep 10
