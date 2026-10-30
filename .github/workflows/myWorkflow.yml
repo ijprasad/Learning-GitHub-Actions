@@ -6,7 +6,9 @@ on:
       - dev
       - 'feature-*'
       - main
-
+  pull_request:
+    branches:
+      - main
       
 jobs:
   Job1:
@@ -26,33 +28,11 @@ jobs:
           mkdir artifacts
           echo 'ls -ltr' >> artifacts/list.txt
           echo 'hostname' >> artifacts/hostname.txt
-      - name: upload single file
-        uses: actions/upload-artifact@v7.0.2        
-        with:
-          name: single_file
-          path: ./myartifact.txt
-      - name: upload from directory
-        uses: actions/upload-artifact@v7.0.2        
-        with:
-          name: directory_artifacts
-          path: artifacts/
-      - name: upload from multiple path
-        uses: actions/upload-artifact@v7.0.2        
-        with:
-          name: multiple_path
-          path: |
-            ./myartifact.txt
-            artifacts/
-      - name: upload from multiple path with exclusion
-        uses: actions/upload-artifact@v7.0.2        
-        with:
-          name: multiple_path_with_expclusion
-          path: |
-            ./myartifact.txt
-            artifacts/
-            !**/hostname.txt
 
 
-          
-        
-        
+  Job2:
+    name: My Job 2
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step 1
+        run: exit 1
