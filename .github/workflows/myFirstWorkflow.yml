@@ -30,18 +30,21 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Job with Single Dependency
-        shell: pwsh
-        run: 
-          echo Get-ComputerInfo
-          echo "GitHub started at $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+        run: |
           sleep 10
+          echo "GitHub started at $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+      - name: Checking Runner Info
+        shell: pwsh
+        run: get-computerinfo
   MyJob4:
     name: My Job 4
     needs:
       - MyJob1
       - MyJob2
       - MyJob3
-    runs-on: macos-13
+    runs-on: macos-latest
     steps:
       - name: Job with Multiple Dependecy
         run: sleep 10
+      - name: Checking Runner Info
+        run: sw_vers
