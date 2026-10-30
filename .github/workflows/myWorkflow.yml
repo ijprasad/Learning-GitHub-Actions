@@ -3,7 +3,7 @@ name: My workflow
 on: 
   push:
 jobs:
-  MyJob1:
+  Job1:
     name: My Job 1
     runs-on: ubuntu-latest
     steps:
