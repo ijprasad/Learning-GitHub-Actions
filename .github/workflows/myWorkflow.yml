@@ -2,6 +2,11 @@ name: My workflow
 # To get a trigger on every commit.
 on: 
   push:
+    branches:
+      - dev
+      - 'feature-*'
+
+      
 jobs:
   Job1:
     name: My Job 1
