@@ -2,8 +2,8 @@ name: My First workflow
 # To get a trigger on every commit.
 on: 
   schedule:
-    - cron: '*/5 * * * *'    
- 
+    - cron: '*/5 * * * *' 
+    
 
 jobs:
   MyJob1:
