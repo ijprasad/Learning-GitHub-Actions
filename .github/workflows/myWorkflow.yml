@@ -21,7 +21,7 @@ jobs:
           echo ls -ltr
           hostname
       - name: upload single file
-        uses: actions/upload-artifact@7.0.2
+        uses: actions/upload-artifact@v7.0.2        
         with:
           name: single_file
           path: ./myartifact.txt
