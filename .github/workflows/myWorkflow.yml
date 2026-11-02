@@ -16,11 +16,11 @@ jobs:
     name: My Job 1
     runs-on: ubuntu-latest
     steps:
-      - name: PRINT LOCAL ENVIRONMENT CONSTENTS
+      - name: Refering Environment Variables
         run: |
           echo "[INFO] The application name is $APP_NAME"
           echo "[INFO] The application path is $APP_PATH"
-      - name: Print Repository secrets
+      - name: Refering Repository secrets
         run: |
           echo "[INFO] The reposiory password is ${{ secrets.APP_PASSWORD }}"
           
