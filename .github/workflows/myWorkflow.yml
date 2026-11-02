@@ -23,11 +23,11 @@ jobs:
       - name: Refering Repository secrets
         run: |
           echo "[INFO] The reposiory password is ${{ secrets.APP_PASSWORD }}"
-    Job2:
+  Job2:
     name: My Job 2
     runs-on: ubuntu-latest
     steps:
-      - name: Refering Context Variables
+      - name: Refering Context Variables 
         run: |
           echo "[INFO] The github action is ${{ github.action }}"          
           echo "[INFO] The github env is ${{ github.ref_name }}"
@@ -36,7 +36,7 @@ jobs:
           echo "[INFO] Current step is ${{ runner.os }}"
           echo "[INFO] Current job id is ${{ job.check_run_id }}"
           
-      - name: Refering Repository secrets
+      - name: Refering Repository secrets seccond
         run: |
           echo "[INFO] The reposiory password is ${{ secrets.APP_PASSWORD }}"
 
