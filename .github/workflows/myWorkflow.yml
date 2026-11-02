@@ -22,5 +22,5 @@ jobs:
           echo "[INFO] The application path is $APP_PATH"
       - name: Print Repository secrets
         run: |
-          echo "[INFO] The reposiory password is {{ secrets.APP_PASSWORD }}"
+          echo "[INFO] The reposiory password is ${{ secrets.APP_PASSWORD }}"
           
